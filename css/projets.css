@@ -1,0 +1,263 @@
+/* Reset CSS et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Header et Navigation */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 2rem;
+}
+
+.menu a {
+    color: #7f8c8d;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.menu a:hover {
+    color: #3498db;
+}
+
+.menu a.active {
+    color: #3498db;
+}
+
+.menu a.active::after,
+.menu a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #3498db;
+    transform: scaleX(1);
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #3498db;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+/* Sections communes */
+section {
+    padding: 4rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+/* Page Projets Détail */
+.projets-detail {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+
+.projets-detail h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.projet-list {
+    margin-top: 3rem;
+}
+
+.projet-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+    overflow: hidden;
+}
+
+.projet-header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 1.5rem 2rem;
+}
+
+.projet-header h2 {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.projet-content {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.projet-image-large {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.projet-image-large img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.projet-details h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #3498db;
+}
+
+.projet-details h3:first-child {
+    margin-top: 0;
+}
+
+.projet-details ul {
+    list-style-position: inside;
+    margin-bottom: 1.5rem;
+}
+
+.projet-details ul li {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.competences-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.competences-tags span {
+    background-color: #e8f4fc;
+    color: #3498db;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.competences-tags a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.competences-tags a:hover span {
+    background-color: #d6eaf8;
+    color: #2874a6;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+.social {
+    margin-top: 1rem;
+}
+
+.social a {
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social a:hover {
+    color: #3498db;
+}
+
+/* Media Queries */
+@media screen and (max-width: 992px) {
+    .projet-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        gap: 1rem;
+    }
+    
+    .menu li {
+        margin-left: 0;
+    }
+}
